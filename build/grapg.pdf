@@ -1,0 +1,5 @@
+digraph G {
+	"Cable batterie Souriau Output"
+	"Cable batterie XT60 Input"
+	"Cable batterie Souriau Output" -> "Cable batterie XT60 Input"
+}

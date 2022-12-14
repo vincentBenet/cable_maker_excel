@@ -1,0 +1,13 @@
+digraph structs {
+	graph [rankdir=LR]
+	node [shape=record]
+	"Cable batterie Souriau Output":subnode -> "interface_Cable batterie Souriau Output" [label="Vin Batt" color=red image="C:\Users\vince\OneDrive\Bureau\cablage\test.PNG"]
+	"Cable batterie Souriau Output":subnode -> "interface_Cable batterie Souriau Output" [label=GND color=black image="C:\Users\vince\OneDrive\Bureau\cablage\test.PNG"]
+	"Cable batterie Souriau Output" [label="{Connecteur Souriau 6|{A|F}}" tooltip="{'Vin cable batterie output': {'Nom': 'Vin cable batterie output', 'Label': 'Vin Batt', 'Couleur': 'red', 'Numero': 1, 'Position': 'A', 'x_pos': 1, 'y_pos': 1, 'PinType': 'Pin molex femelle', 'Reference Fabricant': None, 'Reference Interne': None}, 'GND cable batterie output': {'Nom': 'GND cable batterie output', 'Label': 'GND', 'Couleur': 'black', 'Numero': 6, 'Position': 'F', 'x_pos': 3, 'y_pos': 2, 'PinType': 'Pin molex femelle', 'Reference Fabricant': None, 'Reference Interne': None}}" xlabel="Cable batterie Souriau Output"]
+	"interface_Cable batterie Souriau Output" [label="MANCHON THERMO DE TERMINAISON CABLE"]
+	"Cable batterie XT60 Input":subnode -> "interface_Cable batterie XT60 Input" [label="Vin Batt" color=red image="C:\Users\vince\OneDrive\Bureau\cablage\test.PNG"]
+	"Cable batterie XT60 Input":subnode -> "interface_Cable batterie XT60 Input" [label=GND color=black image="C:\Users\vince\OneDrive\Bureau\cablage\test.PNG"]
+	"Cable batterie XT60 Input" [label="{Connecteur de puissance XT60|{+|-}}" tooltip="{'Vin cable batterie input': {'Nom': 'Vin cable batterie input', 'Label': 'Vin Batt', 'Couleur': 'red', 'Numero': 1, 'Position': '+', 'x_pos': 1, 'y_pos': 1, 'PinType': 'Pin banane male', 'Reference Fabricant': None, 'Reference Interne': None}, 'GND cable batterie input': {'Nom': 'GND cable batterie input', 'Label': 'GND', 'Couleur': 'black', 'Numero': 2, 'Position': '-', 'x_pos': 1, 'y_pos': 2, 'PinType': 'Pin banane male', 'Reference Fabricant': None, 'Reference Interne': None}}" xlabel="Cable batterie XT60 Input"]
+	"interface_Cable batterie XT60 Input" [label="MANCHON THERMO DE TERMINAISON CABLE"]
+	"interface_Cable batterie Souriau Output" -> "interface_Cable batterie XT60 Input"
+}
