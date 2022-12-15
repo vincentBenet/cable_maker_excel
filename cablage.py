@@ -8,6 +8,7 @@ os.environ["PATH"] += os.pathsep + r'C:\Program Files\Graphviz\bin'
 path_current = os.path.dirname(__file__)
 path_excel = os.path.join(path_current, "cablage.xlsx")
 path_graph = os.path.join(path_current, "build", "graph")
+path_test = os.path.join(path_current, "test.png")
 
 print(f"Openning file {path_excel}")
 
@@ -42,11 +43,18 @@ for name_sheet in names_sheets:
 
 # Create graph
 graph = graphviz.Digraph(
-    'structs', 
+    'G', 
     filename=path_graph, 
-    format="svg", 
-    graph_attr={"rankdir": "LR"},
-    node_attr={'shape': 'record'}
+    format="svg",
+    graph_attr={
+        "rankdir": "BT",
+    },
+    node_attr={
+        "shape": "plaintext",
+    },
+)
+graph.attr(
+    rank= "same",
 )
 
 
@@ -58,6 +66,7 @@ for i_node in range(len(data["Connecteurs"])-1):
     connection = ""
     interface = ""
     connecteur = ""
+    
     for connection_line in data_transformed["Connections"]:
         connecteurs = [
             data_transformed["Connections"][connection_line]["From Connecteur"],
@@ -95,19 +104,27 @@ for i_node in range(len(data["Connecteurs"])-1):
             "Reference Interne": data_transformed["Types Pins"][type_pin_connector]["Reference Interne"],
         }
     
+    graph.node(f"svg_{type_connecteur}", **{
+        "label": "",
+        "image": os.path.join(path_current, f"{type_connecteur}.svg"),
+        "shape": "none",
+    })    
     
     label = '{'+type_connecteur+'|{'
     for pin_connecteur in pins_connecteurs:
         subnode = str(pins_connecteurs[pin_connecteur]["Position"])
         label += f"{subnode}|"
+        
         graph.edge(
             f"{name_node}:subnode", 
             f'interface_{name_node}',
             **{
                 "color": pins_connecteurs[pin_connecteur]["Couleur"],
-                "label": pins_connecteurs[pin_connecteur]["Label"],
+                "label": pins_connecteurs[pin_connecteur]["Label"]
             }
         )
+        
+    
         
     label = label[:-1]
     label +='}}' 
@@ -121,11 +138,20 @@ for i_node in range(len(data["Connecteurs"])-1):
         "xlabel": connecteur,
         "label": label,
         "tooltip": tooltip,
+        'shape': 'record',
     })
     
     graph.node(f'interface_{name_node}', **{
-        "label": interface
+        "label": interface,
     })
+    
+    
+    graph.edge(
+        f"svg_{type_connecteur}",
+        name_node, **{
+            "arrowhead": "none"
+        }
+    )
     
 # Create interface nodes
 
@@ -141,4 +167,3 @@ for connection in data_transformed["Connections"]:
         f'interface_{data_transformed["Connections"][connection]["To Connecteur"]}'
     )
 graph.view()
-
