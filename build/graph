@@ -1,0 +1,119 @@
+digraph "Graph" {
+	node [distortion=0 peripheries=1 shape=box]
+	edge [arrowhead=none constraint=true decorate=true labeldistance=5 labelfloat=false labelfontcolor=black labelfontsize=15 portPos=_]
+	center=true compound=true nodesep=5 rank=same rankdir=LR ranksep=5 splines=ortho
+	subgraph "cluster_Cable batterie" {
+		color=grey concentrate=true label="Cable: Cable batterie
+Reference Interne: NR0754" rankdir=LR style=filled
+		subgraph "cluster_Cable batterie Souriau Output" {
+			color=lightgrey label="Connecteur: Cable batterie Souriau Output" splines=ortho style=filled
+			"Cable batterie Souriau Output" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur Souriau 6.svg" xlabel="MANCHON THERMO DE TERMINAISON CABLE"]
+			"Composant_Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Composants\Diode.svg" xlabel="Diode: None"]
+			"Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" [label="1 : A" shape=circle sortv=1 tooltip="Pin type: Pin molex femelle
+Label: A
+Numero: 1" xlabel="MISSING / MISSING"]
+			"GND black Cable batterie Souriau Output Pin molex femelle 3 C" [label="3 : C" shape=circle sortv=3 tooltip="Pin type: Pin molex femelle
+Label: C
+Numero: 3" xlabel="MISSING / MISSING"]
+			"Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" -> "Composant_Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" [color=red headlabel=sdfdsdf penwidth=2 taillabel="Pin molex femelle" xlabel="Vin Batt"]
+			"Composant_Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" -> "Cable batterie Souriau Output" [color=red headlabel="fil[\"Couleur\"]" penwidth=2 taillabel=ssff xlabel=""]
+			"GND black Cable batterie Souriau Output Pin molex femelle 3 C" -> "Cable batterie Souriau Output" [color=black headlabel=black penwidth=2 taillabel="Pin molex femelle" xlabel=GND]
+		}
+		subgraph "cluster_Cable batterie XT60 Input" {
+			color=lightgrey label="Connecteur: Cable batterie XT60 Input" splines=ortho style=filled
+			"Cable batterie XT60 Input" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT60.svg" xlabel="MANCHON THERMO DE TERMINAISON CABLE"]
+			"Vin Batt red Cable batterie XT60 Input Pin banane male pour XT60 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane male pour XT60
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+			"GND black Cable batterie XT60 Input Pin banane male pour XT60 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane male pour XT60
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+			"Vin Batt red Cable batterie XT60 Input Pin banane male pour XT60 1 +" -> "Cable batterie XT60 Input" [color=red headlabel=red penwidth=2 taillabel="Pin banane male pour XT60" xlabel="Vin Batt"]
+			"GND black Cable batterie XT60 Input Pin banane male pour XT60 2 GND" -> "Cable batterie XT60 Input" [color=black headlabel=black penwidth=2 taillabel="Pin banane male pour XT60" xlabel=GND]
+		}
+		"Cable batterie Souriau Output" -> "Cable batterie XT60 Input" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: MANCHON THERMO IMPRIME « NR0754 »
+Longeur: 300"]
+	}
+	subgraph "cluster_FAISCEAU COMMUTATEUR M/A" {
+		color=grey concentrate=true label="Cable: FAISCEAU COMMUTATEUR M/A
+Reference Interne: NR0521" rankdir=LR style=filled
+		subgraph "cluster_Faisceau commutateur - Interrupteur" {
+			color=lightgrey label="Connecteur: Faisceau commutateur - Interrupteur" splines=ortho style=filled
+			"Faisceau commutateur - Interrupteur" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\NTERRUPTEUR UNIPOLAIRE.svg" xlabel="MANCHON THERMOIMPRIME «M/A»"]
+			"SW_NO yellow Faisceau commutateur - Interrupteur Fiche à souder 1 1" [label=1 shape=circle sortv=1 tooltip="Pin type: Fiche à souder
+Label: 1
+Numero: 1" xlabel="MISSING / MISSING"]
+			"Vbat red Faisceau commutateur - Interrupteur Fiche à souder 2 2" [label=2 shape=circle sortv=2 tooltip="Pin type: Fiche à souder
+Label: 2
+Numero: 2" xlabel="MISSING / MISSING"]
+			"SW_COM orange Faisceau commutateur - Interrupteur Fiche à souder 3 3" [label=3 shape=circle sortv=3 tooltip="Pin type: Fiche à souder
+Label: 3
+Numero: 3" xlabel="MISSING / MISSING"]
+			"SW_NO yellow Faisceau commutateur - Interrupteur Fiche à souder 1 1" -> "Faisceau commutateur - Interrupteur" [color=yellow headlabel=yellow penwidth=2 taillabel="Fiche à souder" xlabel=SW_NO]
+			"Vbat red Faisceau commutateur - Interrupteur Fiche à souder 2 2" -> "Faisceau commutateur - Interrupteur" [color=red headlabel=red penwidth=2 taillabel="Fiche à souder" xlabel=Vbat]
+			"SW_COM orange Faisceau commutateur - Interrupteur Fiche à souder 3 3" -> "Faisceau commutateur - Interrupteur" [color=orange headlabel=orange penwidth=2 taillabel="Fiche à souder" xlabel=SW_COM]
+		}
+		subgraph "cluster_Faisceau commutateur - Molex 3 pts" {
+			color=lightgrey label="Connecteur: Faisceau commutateur - Molex 3 pts" splines=ortho style=filled
+			"Faisceau commutateur - Molex 3 pts" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\FICHE MALE 1 X 3PTSMOLEX MICROFIT 3.0.svg" xlabel="MANCHON THERMOIMPRIME «M/A»"]
+			"SW_NO yellow Faisceau commutateur - Molex 3 pts Pin molex femelle 1 1" [label=1 shape=circle sortv=1 tooltip="Pin type: Pin molex femelle
+Label: 1
+Numero: 1" xlabel="MISSING / MISSING"]
+			"Vbat red Faisceau commutateur - Molex 3 pts Pin molex femelle 2 2" [label=2 shape=circle sortv=2 tooltip="Pin type: Pin molex femelle
+Label: 2
+Numero: 2" xlabel="MISSING / MISSING"]
+			"SW_COM orange Faisceau commutateur - Molex 3 pts Pin molex femelle 3 3" [label=3 shape=circle sortv=3 tooltip="Pin type: Pin molex femelle
+Label: 3
+Numero: 3" xlabel="MISSING / MISSING"]
+			"SW_NO yellow Faisceau commutateur - Molex 3 pts Pin molex femelle 1 1" -> "Faisceau commutateur - Molex 3 pts" [color=yellow headlabel=yellow penwidth=2 taillabel="Pin molex femelle" xlabel=SW_NO]
+			"Vbat red Faisceau commutateur - Molex 3 pts Pin molex femelle 2 2" -> "Faisceau commutateur - Molex 3 pts" [color=red headlabel=red penwidth=2 taillabel="Pin molex femelle" xlabel=Vbat]
+			"SW_COM orange Faisceau commutateur - Molex 3 pts Pin molex femelle 3 3" -> "Faisceau commutateur - Molex 3 pts" [color=orange headlabel=orange penwidth=2 taillabel="Pin molex femelle" xlabel=SW_COM]
+		}
+		"Faisceau commutateur - Interrupteur" -> "Faisceau commutateur - Molex 3 pts" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: MANCHON THERMOIMPRIME«NR0521»
+Longeur: 150"]
+	}
+	subgraph "cluster_CableY XT30" {
+		color=grey concentrate=true label="Cable: CableY XT30
+Reference Interne: None" rankdir=LR style=filled
+		subgraph "cluster_XT30 - 1 cable Y" {
+			color=lightgrey label="Connecteur: XT30 - 1 cable Y" splines=ortho style=filled
+			"XT30 - 1 cable Y" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT30 male.svg" xlabel="Soudure directe sans fils"]
+			"Vin Batt red XT30 - 1 cable Y Pin banane male pour XT30 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane male pour XT30
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+			"GND black XT30 - 1 cable Y Pin banane male pour XT30 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane male pour XT30
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+			"Vin Batt red XT30 - 1 cable Y Pin banane male pour XT30 1 +" -> "XT30 - 1 cable Y" [color=red headlabel=red penwidth=2 taillabel="Pin banane male pour XT30" xlabel="Vin Batt"]
+			"GND black XT30 - 1 cable Y Pin banane male pour XT30 2 GND" -> "XT30 - 1 cable Y" [color=black headlabel=black penwidth=2 taillabel="Pin banane male pour XT30" xlabel=GND]
+		}
+		subgraph "cluster_XT30 - 2 cable Y" {
+			color=lightgrey label="Connecteur: XT30 - 2 cable Y" splines=ortho style=filled
+			"XT30 - 2 cable Y" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT30 femelle.svg" xlabel="Soudure directe sans fils"]
+			"Vin Batt red XT30 - 2 cable Y Pin banane femelle pour XT30 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane femelle pour XT30
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+			"GND black XT30 - 2 cable Y Pin banane femelle pour XT30 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane femelle pour XT30
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+			"Vin Batt red XT30 - 2 cable Y Pin banane femelle pour XT30 1 +" -> "XT30 - 2 cable Y" [color=red headlabel=red penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel="Vin Batt"]
+			"GND black XT30 - 2 cable Y Pin banane femelle pour XT30 2 GND" -> "XT30 - 2 cable Y" [color=black headlabel=black penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel=GND]
+		}
+		subgraph "cluster_XT30 - 3 cable Y" {
+			color=lightgrey label="Connecteur: XT30 - 3 cable Y" splines=ortho style=filled
+			"XT30 - 3 cable Y" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT30 femelle.svg" xlabel="Soudure directe sans fils"]
+			"Vin Batt red XT30 - 3 cable Y Pin banane femelle pour XT30 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane femelle pour XT30
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+			"GND black XT30 - 3 cable Y Pin banane femelle pour XT30 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane femelle pour XT30
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+			"Vin Batt red XT30 - 3 cable Y Pin banane femelle pour XT30 1 +" -> "XT30 - 3 cable Y" [color=red headlabel=red penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel="Vin Batt"]
+			"GND black XT30 - 3 cable Y Pin banane femelle pour XT30 2 GND" -> "XT30 - 3 cable Y" [color=black headlabel=black penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel=GND]
+		}
+		"XT30 - 1 cable Y" -> "XT30 - 2 cable Y" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: Soudure directe sans fils
+Longeur: 0"]
+		"XT30 - 2 cable Y" -> "XT30 - 3 cable Y" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: Soudure directe sans fils
+Longeur: 0"]
+	}
+}

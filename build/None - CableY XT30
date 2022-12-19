@@ -1,0 +1,44 @@
+digraph "cluster_CableY XT30" {
+	color=grey concentrate=true label="Cable: CableY XT30
+Reference Interne: None" rankdir=LR style=filled
+	subgraph "cluster_XT30 - 1 cable Y" {
+		color=lightgrey label="Connecteur: XT30 - 1 cable Y" splines=ortho style=filled
+		"XT30 - 1 cable Y" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT30 male.svg" xlabel="Soudure directe sans fils"]
+		"Vin Batt red XT30 - 1 cable Y Pin banane male pour XT30 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane male pour XT30
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+		"GND black XT30 - 1 cable Y Pin banane male pour XT30 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane male pour XT30
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+		"Vin Batt red XT30 - 1 cable Y Pin banane male pour XT30 1 +" -> "XT30 - 1 cable Y" [color=red headlabel=red penwidth=2 taillabel="Pin banane male pour XT30" xlabel="Vin Batt"]
+		"GND black XT30 - 1 cable Y Pin banane male pour XT30 2 GND" -> "XT30 - 1 cable Y" [color=black headlabel=black penwidth=2 taillabel="Pin banane male pour XT30" xlabel=GND]
+	}
+	subgraph "cluster_XT30 - 2 cable Y" {
+		color=lightgrey label="Connecteur: XT30 - 2 cable Y" splines=ortho style=filled
+		"XT30 - 2 cable Y" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT30 femelle.svg" xlabel="Soudure directe sans fils"]
+		"Vin Batt red XT30 - 2 cable Y Pin banane femelle pour XT30 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane femelle pour XT30
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+		"GND black XT30 - 2 cable Y Pin banane femelle pour XT30 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane femelle pour XT30
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+		"Vin Batt red XT30 - 2 cable Y Pin banane femelle pour XT30 1 +" -> "XT30 - 2 cable Y" [color=red headlabel=red penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel="Vin Batt"]
+		"GND black XT30 - 2 cable Y Pin banane femelle pour XT30 2 GND" -> "XT30 - 2 cable Y" [color=black headlabel=black penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel=GND]
+	}
+	subgraph "cluster_XT30 - 3 cable Y" {
+		color=lightgrey label="Connecteur: XT30 - 3 cable Y" splines=ortho style=filled
+		"XT30 - 3 cable Y" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT30 femelle.svg" xlabel="Soudure directe sans fils"]
+		"Vin Batt red XT30 - 3 cable Y Pin banane femelle pour XT30 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane femelle pour XT30
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+		"GND black XT30 - 3 cable Y Pin banane femelle pour XT30 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane femelle pour XT30
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+		"Vin Batt red XT30 - 3 cable Y Pin banane femelle pour XT30 1 +" -> "XT30 - 3 cable Y" [color=red headlabel=red penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel="Vin Batt"]
+		"GND black XT30 - 3 cable Y Pin banane femelle pour XT30 2 GND" -> "XT30 - 3 cable Y" [color=black headlabel=black penwidth=2 taillabel="Pin banane femelle pour XT30" xlabel=GND]
+	}
+	"XT30 - 1 cable Y" -> "XT30 - 2 cable Y" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: Soudure directe sans fils
+Longeur: 0"]
+	"XT30 - 2 cable Y" -> "XT30 - 3 cable Y" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: Soudure directe sans fils
+Longeur: 0"]
+}

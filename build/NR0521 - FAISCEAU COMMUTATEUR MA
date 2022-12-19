@@ -1,0 +1,38 @@
+digraph "cluster_FAISCEAU COMMUTATEUR M/A" {
+	color=grey concentrate=true label="Cable: FAISCEAU COMMUTATEUR M/A
+Reference Interne: NR0521" rankdir=LR style=filled
+	subgraph "cluster_Faisceau commutateur - Interrupteur" {
+		color=lightgrey label="Connecteur: Faisceau commutateur - Interrupteur" splines=ortho style=filled
+		"Faisceau commutateur - Interrupteur" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\NTERRUPTEUR UNIPOLAIRE.svg" xlabel="MANCHON THERMOIMPRIME «M/A»"]
+		"SW_NO yellow Faisceau commutateur - Interrupteur Fiche à souder 1 1" [label=1 shape=circle sortv=1 tooltip="Pin type: Fiche à souder
+Label: 1
+Numero: 1" xlabel="MISSING / MISSING"]
+		"Vbat red Faisceau commutateur - Interrupteur Fiche à souder 2 2" [label=2 shape=circle sortv=2 tooltip="Pin type: Fiche à souder
+Label: 2
+Numero: 2" xlabel="MISSING / MISSING"]
+		"SW_COM orange Faisceau commutateur - Interrupteur Fiche à souder 3 3" [label=3 shape=circle sortv=3 tooltip="Pin type: Fiche à souder
+Label: 3
+Numero: 3" xlabel="MISSING / MISSING"]
+		"SW_NO yellow Faisceau commutateur - Interrupteur Fiche à souder 1 1" -> "Faisceau commutateur - Interrupteur" [color=yellow headlabel=yellow penwidth=2 taillabel="Fiche à souder" xlabel=SW_NO]
+		"Vbat red Faisceau commutateur - Interrupteur Fiche à souder 2 2" -> "Faisceau commutateur - Interrupteur" [color=red headlabel=red penwidth=2 taillabel="Fiche à souder" xlabel=Vbat]
+		"SW_COM orange Faisceau commutateur - Interrupteur Fiche à souder 3 3" -> "Faisceau commutateur - Interrupteur" [color=orange headlabel=orange penwidth=2 taillabel="Fiche à souder" xlabel=SW_COM]
+	}
+	subgraph "cluster_Faisceau commutateur - Molex 3 pts" {
+		color=lightgrey label="Connecteur: Faisceau commutateur - Molex 3 pts" splines=ortho style=filled
+		"Faisceau commutateur - Molex 3 pts" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\FICHE MALE 1 X 3PTSMOLEX MICROFIT 3.0.svg" xlabel="MANCHON THERMOIMPRIME «M/A»"]
+		"SW_NO yellow Faisceau commutateur - Molex 3 pts Pin molex femelle 1 1" [label=1 shape=circle sortv=1 tooltip="Pin type: Pin molex femelle
+Label: 1
+Numero: 1" xlabel="MISSING / MISSING"]
+		"Vbat red Faisceau commutateur - Molex 3 pts Pin molex femelle 2 2" [label=2 shape=circle sortv=2 tooltip="Pin type: Pin molex femelle
+Label: 2
+Numero: 2" xlabel="MISSING / MISSING"]
+		"SW_COM orange Faisceau commutateur - Molex 3 pts Pin molex femelle 3 3" [label=3 shape=circle sortv=3 tooltip="Pin type: Pin molex femelle
+Label: 3
+Numero: 3" xlabel="MISSING / MISSING"]
+		"SW_NO yellow Faisceau commutateur - Molex 3 pts Pin molex femelle 1 1" -> "Faisceau commutateur - Molex 3 pts" [color=yellow headlabel=yellow penwidth=2 taillabel="Pin molex femelle" xlabel=SW_NO]
+		"Vbat red Faisceau commutateur - Molex 3 pts Pin molex femelle 2 2" -> "Faisceau commutateur - Molex 3 pts" [color=red headlabel=red penwidth=2 taillabel="Pin molex femelle" xlabel=Vbat]
+		"SW_COM orange Faisceau commutateur - Molex 3 pts Pin molex femelle 3 3" -> "Faisceau commutateur - Molex 3 pts" [color=orange headlabel=orange penwidth=2 taillabel="Pin molex femelle" xlabel=SW_COM]
+	}
+	"Faisceau commutateur - Interrupteur" -> "Faisceau commutateur - Molex 3 pts" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: MANCHON THERMOIMPRIME«NR0521»
+Longeur: 150"]
+}

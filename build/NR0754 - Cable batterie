@@ -1,0 +1,32 @@
+digraph "cluster_Cable batterie" {
+	color=grey concentrate=true label="Cable: Cable batterie
+Reference Interne: NR0754" rankdir=LR style=filled
+	subgraph "cluster_Cable batterie Souriau Output" {
+		color=lightgrey label="Connecteur: Cable batterie Souriau Output" splines=ortho style=filled
+		"Cable batterie Souriau Output" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur Souriau 6.svg" xlabel="MANCHON THERMO DE TERMINAISON CABLE"]
+		"Composant_Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Composants\Diode.svg" xlabel="Diode: None"]
+		"Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" [label="1 : A" shape=circle sortv=1 tooltip="Pin type: Pin molex femelle
+Label: A
+Numero: 1" xlabel="MISSING / MISSING"]
+		"GND black Cable batterie Souriau Output Pin molex femelle 3 C" [label="3 : C" shape=circle sortv=3 tooltip="Pin type: Pin molex femelle
+Label: C
+Numero: 3" xlabel="MISSING / MISSING"]
+		"Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" -> "Composant_Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" [color=red headlabel=sdfdsdf penwidth=2 taillabel="Pin molex femelle" xlabel="Vin Batt"]
+		"Composant_Vin Batt red Cable batterie Souriau Output Pin molex femelle 1 A" -> "Cable batterie Souriau Output" [color=red headlabel="fil[\"Couleur\"]" penwidth=2 taillabel=ssff xlabel=""]
+		"GND black Cable batterie Souriau Output Pin molex femelle 3 C" -> "Cable batterie Souriau Output" [color=black headlabel=black penwidth=2 taillabel="Pin molex femelle" xlabel=GND]
+	}
+	subgraph "cluster_Cable batterie XT60 Input" {
+		color=lightgrey label="Connecteur: Cable batterie XT60 Input" splines=ortho style=filled
+		"Cable batterie XT60 Input" [label="" image="C:\Users\vince\Desktop\cable_maker_excel\schemas\Connecteurs\Connecteur de puissance XT60.svg" xlabel="MANCHON THERMO DE TERMINAISON CABLE"]
+		"Vin Batt red Cable batterie XT60 Input Pin banane male pour XT60 1 +" [label="1 : +" shape=circle sortv=1 tooltip="Pin type: Pin banane male pour XT60
+Label: +
+Numero: 1" xlabel="MISSING / MISSING"]
+		"GND black Cable batterie XT60 Input Pin banane male pour XT60 2 GND" [label="2 : GND" shape=circle sortv=2 tooltip="Pin type: Pin banane male pour XT60
+Label: GND
+Numero: 2" xlabel="MISSING / MISSING"]
+		"Vin Batt red Cable batterie XT60 Input Pin banane male pour XT60 1 +" -> "Cable batterie XT60 Input" [color=red headlabel=red penwidth=2 taillabel="Pin banane male pour XT60" xlabel="Vin Batt"]
+		"GND black Cable batterie XT60 Input Pin banane male pour XT60 2 GND" -> "Cable batterie XT60 Input" [color=black headlabel=black penwidth=2 taillabel="Pin banane male pour XT60" xlabel=GND]
+	}
+	"Cable batterie Souriau Output" -> "Cable batterie XT60 Input" [color=black headlabel="" headport=c penwidth=8 taillabel="" xlabel="Label: MANCHON THERMO IMPRIME « NR0754 »
+Longeur: 300"]
+}
